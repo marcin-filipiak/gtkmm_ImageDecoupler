@@ -39,4 +39,4 @@ This tool can be particularly useful for users who need to clean up their photo 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License
