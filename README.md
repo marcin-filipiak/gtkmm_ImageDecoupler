@@ -1,1 +1,1 @@
-# gtkmm_ImgeDecoupler
+# gtkmm_ImageDecoupler
