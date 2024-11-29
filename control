@@ -1,0 +1,6 @@
+Package: ImageDecoupler
+Version: 0.1
+Architecture: all
+Maintainer: Marcin Filipiak
+Section: graphics
+Description: Image decoupler
