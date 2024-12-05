@@ -40,3 +40,7 @@ This tool can be particularly useful for users who need to clean up their photo 
 ## License
 
 This project is licensed under the MIT License
+
+## Links
+
+* ![Image Decoupler console version](https://github.com/marcin-filipiak/cpp_ImageDecoupler)
