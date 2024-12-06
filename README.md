@@ -37,10 +37,11 @@ This tool can be particularly useful for users who need to clean up their photo 
   - GTKmm (for the graphical interface)
   - zlib (for CRC32 hash calculation)
 
-## License
-
-This project is licensed under the MIT License
-
 ## Links
 
-* ![Image Decoupler console version](https://github.com/marcin-filipiak/cpp_ImageDecoupler)
+My tools for images segregation, resizing etc:
+
+* ![Image Decoupler GUI](https://github.com/marcin-filipiak/gtkmm_ImageDecoupler) - GTKmm, find duplicated images in subfolders
+* ![Image Decoupler Console](https://github.com/marcin-filipiak/cpp_ImageDecoupler) - Console, find duplicated images in subfolders
+* ![Image Segregator GUI](https://github.com/marcin-filipiak/gtk_ImageSegregator) - GTK, usefull tool for images segregation
+* ![Image Resizer GUI](https://github.com/marcin-filipiak/gtk_ImageResizer) - GTK , resize images in folder
