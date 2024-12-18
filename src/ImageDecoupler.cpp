@@ -10,6 +10,7 @@
 #include <dirent.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <filesystem> //rozmiar pliku
 
 #define VERSION "0.4"
 
@@ -126,7 +127,14 @@ private:
                 std::string fileName = entry->d_name;
                 if (fileName.length() >= 4 && fileName.substr(fileName.length() - 4) == ".jpg") {
                     std::string fp = folderPath + '/' + fileName;
-                    outputFile << "\"" << fp << "\" \"" << calculateCRC32(fp) << "\"" << std::endl;
+                    //czy plik nie jest pusty
+                    auto fileSize = std::filesystem::file_size(fp);
+                    if (fileSize > 0) {
+                        outputFile << "\"" << fp << "\" \"" << calculateCRC32(fp) << "\"" << std::endl;
+                    }
+                    else {
+                         std::cerr << fp << " have 0 bytes" << std::endl;
+                    }
                 }
             }
             closedir(dir);
@@ -157,7 +165,14 @@ void saveJPGFileRecurencyPaths(const std::string& folderPath, const std::string&
                 if (stat(filePath.c_str(), &fileStat) == 0 && S_ISDIR(fileStat.st_mode)) {
                     saveJPGFileRecurencyPaths(filePath, outputPath);
                 } else if (fileName.length() >= 4 && fileName.substr(fileName.length() - 4) == ".jpg") {
-                    outputFile << "\"" << filePath << "\" \"" << calculateCRC32(filePath) << "\"" << std::endl;
+                    // czy plik nie jest pusty
+                    auto fileSize = std::filesystem::file_size(filePath);
+                    if (fileSize > 0) {
+                        outputFile << "\"" << filePath << "\" \"" << calculateCRC32(filePath) << "\"" << std::endl;
+                    }
+                    else {
+                         std::cerr << filePath << " have 0 bytes" << std::endl;
+                    }
                 }
             }
         }
