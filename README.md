@@ -2,6 +2,8 @@
 
 ## Overview
 
+<img src="ImageDecoupler.jpg" alt="image decoupler">
+
 DECOUPLER is a desktop application designed to help users find and remove duplicate JPG files from a selected directory or its subdirectories. By calculating and comparing the CRC32 hash of each file, the program identifies duplicates and allows the user to decide which file to delete.
 
 This tool can be particularly useful for users who need to clean up their photo libraries, manage disk space, or organize image collections.
